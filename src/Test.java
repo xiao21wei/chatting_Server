@@ -11,5 +11,11 @@ public class Test {
         DataBase.getDataBase().connection();
         String sql = "update room set room_name = ? where room_name= ?";
         DataBase.getDataBase().exec(sql,"aa","cc");
+        sql = "insert into room(room_name) values(?)";
+        DataBase.getDataBase().exec(sql, "xiaowei");
+        sql = "insert into room(room_name) values('dddddd')";
+        DataBase.getDataBase().exec(sql);
+        sql = "delete from room where room_name = ?";
+        DataBase.getDataBase().exec(sql, "aa");
     }
 }
